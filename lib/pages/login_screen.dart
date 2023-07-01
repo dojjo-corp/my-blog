@@ -121,13 +121,13 @@ class LoginPage extends StatelessWidget {
                     children: [
                       SquareIcons(
                           imagePath: 
-                          'lib/images/google.png', 
+                          'assets/google.png', 
                           // ignore: avoid_print
                           onTap: () {print('Google login');}),
                       const SizedBox(width: 10),
                       SquareIcons(
                           imagePath: 
-                          'lib/images/apple.png',
+                          'assets/apple.png',
                           // ignore: avoid_print
                           onTap: () {print('Apple login');}),
                     ],
