@@ -95,7 +95,7 @@ class LoginPage extends StatelessWidget {
                       label: 'login',
                       onTap: () {
                         // ignore: avoid_print
-                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const Dashboard(title: 'My Dashboard',)));
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const Dashboard()));
                       },
                                      ),
                    ),

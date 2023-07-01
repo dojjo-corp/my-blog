@@ -1,3 +1,4 @@
+import 'package:dojjoblog/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -27,7 +28,8 @@ class MyDrawer extends StatelessWidget {
               onTap: (){
                 // ignore: avoid_print
                 print('dashboard clicked');
-                Navigator.pop(context);},
+                Navigator.popAndPushNamed(context, '/dashboard');
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

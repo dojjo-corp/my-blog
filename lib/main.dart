@@ -1,3 +1,4 @@
+import 'package:dojjoblog/pages/dashboard.dart';
 import 'package:dojjoblog/pages/home_page.dart';
 import 'package:flutter/material.dart';
 // import 'package:dojjoblog/pages/dashboard.dart';
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomePage(),
+      routes: {
+        '/dashboard': (context) => const Dashboard()
+      },
     );
   }
 }

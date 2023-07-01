@@ -4,9 +4,9 @@ import 'package:dojjoblog/components/drawer.dart';
 import 'package:dojjoblog/components/blog_card.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({super.key, required this.title});
-
-  final String title;
+  const Dashboard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Dashboard extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(title),
+          title: const Text('My Dashboard'),
         ),
         drawer: const MyDrawer(),
         body: const SingleChildScrollView(
@@ -22,21 +22,51 @@ class Dashboard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                BlogCard(imgPath: '',),
-                SizedBox(height: 20,),
-                BlogCard(imgPath: '',),
-                SizedBox(height: 20,),
-                BlogCard(imgPath: '',),
-                SizedBox(height: 20,),
-                BlogCard(imgPath: '',),
-                SizedBox(height: 20,),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
+                  child: Text(
+                    'This is where stories are made',
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Montserrat',
+                        color: Colors.blueGrey),
+                        textAlign: TextAlign.center,
+                  ),
+                ),
+                BlogCard(
+                  imgPath: 'assets/copywriting.png',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                BlogCard(
+                  imgPath: 'assets/influencer (1).png',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                BlogCard(
+                  imgPath: 'assets/influencer (2).png',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                BlogCard(
+                  imgPath: 'assets/influencer.png',
+                ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           // ignore: avoid_print
-          onPressed: (){print('Create New Blog!');},
+          onPressed: () {
+            print('Create New Blog!');
+          },
           child: const Icon(Icons.add),
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
