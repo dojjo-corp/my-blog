@@ -16,7 +16,7 @@ class SignUp extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Sign Up'),
-          backgroundColor: Colors.grey[700],
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
         backgroundColor: Colors.grey[100],
         body: SingleChildScrollView(

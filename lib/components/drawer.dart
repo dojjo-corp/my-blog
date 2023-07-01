@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:dojjoblog/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,6 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 290,
       child: Column(
         children: [
           Card(
@@ -47,7 +47,9 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal:50.0, vertical: 20),
             child: GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Navigator.popAndPushNamed(context, '/accountConfig');
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -65,7 +67,9 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal:50, vertical: 20),
             child: GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Navigator.popAndPushNamed(context, '/appSettings');
+              },
               child:  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

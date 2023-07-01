@@ -31,7 +31,7 @@ class BlogCard extends StatelessWidget {
           ),
           const Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            style: TextStyle(fontSize: 14, color: Colors.blueGrey),
+            style: TextStyle(fontSize: 14,),
           ),
           TextButton(
             onPressed: () {

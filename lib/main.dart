@@ -1,7 +1,10 @@
+import 'package:dojjoblog/pages/account_configuration.dart';
+import 'package:dojjoblog/pages/app_settings.dart';
 import 'package:dojjoblog/pages/dashboard.dart';
 import 'package:dojjoblog/pages/home_page.dart';
+import 'package:dojjoblog/pages/login_screen.dart';
 import 'package:flutter/material.dart';
-// import 'package:dojjoblog/pages/dashboard.dart';
+import 'package:dojjoblog/pages/sign_up.dart';
 
 
 void main() {
@@ -23,7 +26,11 @@ class MyApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: {
-        '/dashboard': (context) => const Dashboard()
+        '/dashboard': (context) => const Dashboard(),
+        '/login': (context) => LoginPage(),
+        '/signUp': (context) => SignUp(),
+        '/accountConfig': (context) => const AccountConfig(),
+        '/appSettings': (context) => const AppSettings(),
       },
     );
   }

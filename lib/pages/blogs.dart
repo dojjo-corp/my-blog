@@ -11,11 +11,12 @@ class BlogDetails extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text('Blog'),
         ),
         drawer: const MyDrawer(),
         body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [],
           ),

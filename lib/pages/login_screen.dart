@@ -26,8 +26,9 @@ class LoginPage extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Login',
               style: TextStyle(color: Colors.black87)),
-            backgroundColor: Colors.grey[700],),
-          backgroundColor: Colors.grey[100],
+              backgroundColor: Colors.grey[700],
+            ),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           body: SingleChildScrollView(
             child: Center(
               child: Column(
