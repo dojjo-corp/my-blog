@@ -83,6 +83,25 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:50.0, vertical: 20),
+            child: GestureDetector(
+              onTap: (){
+                Navigator.popAndPushNamed(context, '/accountConfig');
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('My Blogs'),
+                  const SizedBox(width: 100,),
+                  Icon(
+                    Icons.collections_bookmark_rounded,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ],
+              ),
+            ),
+          ),
           // TextButton
         ],
       ),
