@@ -26,9 +26,9 @@ class LoginPage extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Login',
               style: TextStyle(color: Colors.black87)),
-              backgroundColor: Colors.grey[700],
+              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
             ),
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: Colors.grey[300],
           body: SingleChildScrollView(
             child: Center(
               child: Column(
@@ -121,16 +121,20 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SquareIcons(
-                          imagePath: 
-                          'assets/google.png', 
+                        imagePath: 'assets/google.png',
+                        onTap: () {
+                          Navigator.popAndPushNamed(context, '/dashboard');
                           // ignore: avoid_print
-                          onTap: () {print('Google login');}),
-                      const SizedBox(width: 10),
-                      SquareIcons(
-                          imagePath: 
-                          'assets/apple.png',
+                          print('Google sign up');
+                        }),
+                    const SizedBox(width: 10),
+                    SquareIcons(
+                        imagePath: 'assets/apple.png',
+                        onTap: () {
+                          Navigator.popAndPushNamed(context, '/dashboard');
                           // ignore: avoid_print
-                          onTap: () {print('Apple login');}),
+                          print('Apple sign up');
+                        }),
                     ],
                   ),
                   const Text('Not yet a member?'),

@@ -1,3 +1,4 @@
+import 'package:dojjoblog/pages/create_blog.dart';
 import 'package:flutter/material.dart';
 import 'package:dojjoblog/components/drawer.dart';
 // ignore: depend_on_referenced_packages
@@ -65,6 +66,8 @@ class Dashboard extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           // ignore: avoid_print
           onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>const CreateBlog()));
+            // ignore: avoid_print
             print('Create New Blog!');
           },
           child: const Icon(Icons.add),
