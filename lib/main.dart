@@ -5,10 +5,14 @@ import 'package:dojjoblog/pages/home_page.dart';
 import 'package:dojjoblog/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:dojjoblog/pages/sign_up.dart';
+import 'dart:io';
+// import 'package:dojjoblog/pages/blogs.dart';
 
 
 void main() {
   runApp(const MyApp());
+  final tryJson = File('assets/try.json');
+  print(tryJson.readAsString().then((value) => print(value)));
 }
 
 class MyApp extends StatelessWidget {

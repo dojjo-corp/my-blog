@@ -1,7 +1,12 @@
+
 import 'package:dojjoblog/components/drawer.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:dojjoblog/pages/dashboard.dart';
+
+// to hold data from json file
+List<Map<String, dynamic>> data = [{}];
+
 
 class BlogDetails extends StatelessWidget {
   const BlogDetails({
