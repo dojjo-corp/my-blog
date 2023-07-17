@@ -3,16 +3,16 @@ import 'package:dojjoblog/pages/app_settings.dart';
 import 'package:dojjoblog/pages/dashboard.dart';
 import 'package:dojjoblog/pages/home_page.dart';
 import 'package:dojjoblog/pages/login_screen.dart';
+import 'package:dojjoblog/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:dojjoblog/pages/sign_up.dart';
-import 'dart:io';
-// import 'package:dojjoblog/pages/blogs.dart';
-
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
-  final tryJson = File('assets/try.json');
-  print(tryJson.readAsString().then((value) => print(value)));
+  runApp(ChangeNotifierProvider<UserProvider>(
+    create: (_) => UserProvider(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -39,4 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

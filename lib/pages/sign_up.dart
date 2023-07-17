@@ -1,6 +1,8 @@
+import 'package:dojjoblog/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:dojjoblog/components/text_field.dart';
 import 'package:dojjoblog/components/my_button.dart';
+import 'package:provider/provider.dart';
 
 import '../components/square_icons.dart';
 
@@ -13,6 +15,8 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -72,6 +76,10 @@ class SignUp extends StatelessWidget {
                   child: MyButton(
                     label: 'sign up',
                     onTap: () {
+                      userProvider.setCurrentUser(
+                        name: nameController.value.text,
+                        password: passwordController.value.text,
+                      );
                       Navigator.popAndPushNamed(context, '/dashboard');
                       // ignore: avoid_print
                       print('You\'ve signed up!');

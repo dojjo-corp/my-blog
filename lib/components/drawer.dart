@@ -1,12 +1,16 @@
 // ignore: unused_import
 import 'package:dojjoblog/pages/dashboard.dart';
+import 'package:dojjoblog/providers/user_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+
     return Drawer(
       child: Column(
         children: [
@@ -16,7 +20,7 @@ class MyDrawer extends StatelessWidget {
                 Image.asset(
                   'assets/man.png', width: 100, height: 100),
                 const SizedBox(width: 100),
-                const Text('UserName'),
+                Text(userProvider.currentUser['name']!),
               ],
             ),
           ),
