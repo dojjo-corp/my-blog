@@ -19,8 +19,8 @@ class MyDrawer extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/man.png', width: 100, height: 100),
-                const SizedBox(width: 100),
-                Text(userProvider.currentUser['name']!),
+                const SizedBox(width: 50),
+                Text(userProvider.currentUser['name']!.toUpperCase(), overflow: TextOverflow.ellipsis,),
               ],
             ),
           ),
