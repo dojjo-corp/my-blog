@@ -69,7 +69,7 @@ class SignUp extends StatelessWidget {
                     controller: passwordController,
                     labelText: const Text('Password')),
                 const SizedBox(
-                  height: 15,
+                  height: 15
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -79,6 +79,7 @@ class SignUp extends StatelessWidget {
                       userProvider.setCurrentUser(
                         name: nameController.value.text,
                         password: passwordController.value.text,
+                        email: emailController.value.text,
                       );
                       Navigator.popAndPushNamed(context, '/dashboard');
                       // ignore: avoid_print
@@ -86,9 +87,7 @@ class SignUp extends StatelessWidget {
                     },
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const Row(
                   children: [
                     Expanded(
