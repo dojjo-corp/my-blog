@@ -1,8 +1,7 @@
-// ignore: unused_import
-import 'package:dojjoblog/pages/dashboard.dart';
-import 'package:dojjoblog/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../authentication/providers/user_provider.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

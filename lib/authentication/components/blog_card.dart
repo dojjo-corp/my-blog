@@ -1,5 +1,6 @@
-import 'package:dojjoblog/pages/blogs.dart';
 import 'package:flutter/material.dart';
+
+import '../pages/blogs.dart';
 
 class BlogCard extends StatelessWidget {
   const BlogCard({

@@ -1,6 +1,7 @@
-import 'package:dojjoblog/pages/login_screen.dart';
-import 'package:dojjoblog/pages/sign_up.dart';
 import 'package:flutter/material.dart';
+
+import '../authentication/pages/login_screen.dart';
+import '../authentication/pages/sign_up.dart';
 
 
 class HomePage extends StatelessWidget {

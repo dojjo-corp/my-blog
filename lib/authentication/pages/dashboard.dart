@@ -1,8 +1,9 @@
-import 'package:dojjoblog/pages/create_blog.dart';
 import 'package:flutter/material.dart';
-import 'package:dojjoblog/components/drawer.dart';
 // ignore: depend_on_referenced_packages
-import 'package:dojjoblog/components/blog_card.dart';
+
+import '../components/blog_card.dart';
+import '../../global/drawer.dart';
+import 'create_blog.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({

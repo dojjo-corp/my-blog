@@ -1,10 +1,10 @@
-import 'package:dojjoblog/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:dojjoblog/components/text_field.dart';
-import 'package:dojjoblog/components/my_button.dart';
 import 'package:provider/provider.dart';
 
+import '../components/my_button.dart';
 import '../components/square_icons.dart';
+import '../components/text_field.dart';
+import '../providers/user_provider.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
