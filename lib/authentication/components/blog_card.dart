@@ -26,7 +26,7 @@ class BlogCard extends StatelessWidget {
           children: [
             Image.asset(
               imgPath,
-              height: 300,
+              height: 200,
               fit: BoxFit.cover,
             ),
             const SizedBox(
@@ -62,6 +62,9 @@ class BlogCard extends StatelessWidget {
             Text(
               intro,
               style: const TextStyle(fontSize: 14),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              softWrap: true,
             ),
             TextButton(
               onPressed: () {
