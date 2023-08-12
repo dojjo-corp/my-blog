@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.blueGrey[50],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             Text(
               'Welcome To The Dojjo BlogSpace',
               style: TextStyle(
-                color: Theme.of(context).primaryColorLight,
+                color: Theme.of(context).primaryColorDark,
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
                 // letterSpacing: 2.0,
@@ -27,23 +27,38 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
-                  },
-                  child: const Text('Login'),
-                ),
-                const SizedBox(width: 20,),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUp()));
-                  },
-                  child: const Text('Sign Up'),
-                ),
-              ],
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 40,
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Theme.of(context).primaryColorDark,
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const LoginPage()));
+                      },
+                      child: const Text('Login'),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Theme.of(context).primaryColorDark,
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUp()));
+                      },
+                      child: const Text('Sign Up'),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

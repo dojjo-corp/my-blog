@@ -5,48 +5,48 @@ class MyTextField extends StatelessWidget {
   final String hintText;
   final Widget labelText;
   final TextEditingController controller;
+  // ignore: prefer_function_declarations_over_variables
+  final String? Function(String?)? validator = (value){
+    return value!.isEmpty ? 'Field ca\'t be empty':null;
+  };
 
   // constructor with formal parameter intiations
-  const MyTextField({
+  MyTextField({
     super.key,
     required this.obscureText,
     required this.hintText,
     required this.controller,
     required this.labelText,
-    });
+    validator,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.symmetric( horizontal: 25),
-      child: TextField(
-        controller: controller,
-        cursorColor: Colors.grey[600],
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.grey[200],
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.grey[300]!
-              ),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 2,
-            )
-          ),
-          label: labelText,
-          labelStyle: TextStyle(color: Colors.grey[800]),
-          hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey[300]),
+    return TextFormField(
+      controller: controller,
+      cursorColor: Colors.grey[600],
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.grey[200],
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.grey[300]!),
         ),
-        obscureText: obscureText,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(
+          color: Colors.white,
+          width: 2,
+        )),
+        label: labelText,
+        labelStyle: TextStyle(color: Colors.grey[800]),
+        hintText: hintText,
+        hintStyle: TextStyle(color: Colors.grey[300]),
       ),
+      obscureText: obscureText,
+      validator: validator,
     );
   }
 }
 
-final form = TextFormField(
-  
-);
+final form = TextFormField();

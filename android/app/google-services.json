@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "895995958794",
+    "project_id": "dojjoblog",
+    "storage_bucket": "dojjoblog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895995958794:android:76d9e6bd9e49c787ebf1f3",
+        "android_client_info": {
+          "package_name": "com.example.dojjoblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895995958794-bukvfbpplk932623t26ctg8b06ktdol1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXUPXqSP1QEHMlJXeIbKExkcWGsZWL6mE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895995958794-bukvfbpplk932623t26ctg8b06ktdol1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
