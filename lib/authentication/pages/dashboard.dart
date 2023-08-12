@@ -24,7 +24,7 @@ class _DashboardState extends State<Dashboard> {
   final blogs = blogList;
 
   void restartApp() {
-    Restart.restartApp();
+    // Restart.restartApp();
   }
 
   @override
